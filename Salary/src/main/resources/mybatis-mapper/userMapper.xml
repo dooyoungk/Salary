@@ -15,8 +15,7 @@
 		select u.user_id, u.user_nm, d.dept_nm, u.user_telno, u.user_addr, listagg(h.hobby_nm, ',')
 		from tbl_user u, tbl_dept d, tbl_hobby h, tbl_u_b_cnct c
 		where u.dept_no = d.dept_no and u.user_id = c.user_id and h.hobby_no = c.hobby_no
-		and u.user_id= #{ user_id}, u.user_nm=#{ user_nm}, d.dept_nm=#{ dept_nm}, u.user_telno=#{ user_telno}, u.user_addr=#{ user_addr},
-		h.hobby_nm=#{ hobby_nm}
+		and u.user_id= #{ user_id}
 	</select>
 	
 	
